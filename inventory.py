@@ -219,3 +219,54 @@ def highest_quantity():
     # Mark item as sale
     print("\n This item is on sale!! ")
     print(max(shoe_obj, key=lambda item: item.quantity))
+
+ #==========Main Menu=============
+'''
+    Create a menu that executes each function above.
+    This menu should be inside the while loop. Be creative!
+'''
+
+
+read_shoes_data()
+while True:
+    try:
+        menu = int(input(
+                "\n1. Capture Shoes"
+        "\n2. View All"
+        "\n3. Restock "
+        "\n4. Search"
+        "\n5. View Item Values"
+        "\n6. View Sale Items"
+        "\n  Choose any number greater than 6 to EXIT! "
+        "\nPlease select from the menu above:"
+                
+        )
+        
+        )
+        
+
+        if menu == 1:
+                capture_shoes()
+
+        elif menu == 2:
+                view_all()
+
+        elif menu == 3:
+                restock()
+
+        elif menu == 4:
+                search_shoe()
+
+        elif menu == 5:
+                value_per_item()
+
+        elif menu == 6:
+                highest_quantity()
+        elif menu > 6:
+             print("You can no longer make changers on inventory.txt")
+             break
+  
+    except ValueError:
+         print("\nYou have selected an invalid option. ")
+           
+               
